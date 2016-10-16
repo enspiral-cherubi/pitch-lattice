@@ -3,6 +3,7 @@ import $ from 'jquery'
 import ThreeOrbitControls from 'three-orbit-controls'
 var OrbitControls = ThreeOrbitControls(THREE)
 import WindowResize from 'three-window-resize'
+import MidiGeometry from './midi-geometry'
 
 class Environment {
 
@@ -21,6 +22,8 @@ class Environment {
     var windowResize = new WindowResize(this.renderer, this.camera)
 
     this._addCubeToScene()
+
+    var midiGeometry = new MidiGeometry()
   }
 
   render () {
